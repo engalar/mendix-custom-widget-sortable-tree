@@ -6,7 +6,6 @@ import "./ui/index.scss";
 
 import { Observer } from "mobx-react";
 import { Store } from "./store";
-import { CascaderComponent } from "./components/CascaderComponent";
 import { useUnmount } from "ahooks";
 
 const parseStyle = (style = ""): { [key: string]: string } => {
@@ -39,6 +38,5 @@ export default function Cascader(props: CascaderContainerProps) {
 
     return <Observer>{() =>
         <div className={props.class} style={parseStyle(props.style)}>
-            <CascaderComponent store={store} />
         </div>}</Observer>;
 }
